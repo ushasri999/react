@@ -1,13 +1,17 @@
-const App = () => {
-  let name = "Usha";
+import React from "react";
 
-  return(
-    <div>
-      <center>
-        <h3>Welcome {name}</h3>
-      </center>
-    </div>
-  )
+class App extends React.Component{
+  render(){
+    let name = "Usha";
+    return(
+      <div>
+        <center>
+          <h3>Welcome {name}</h3>
+        </center>
+      </div>
+    )
+      
+  }
 }
 
 export default App;
