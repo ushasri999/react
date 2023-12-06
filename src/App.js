@@ -1,12 +1,16 @@
 import React from "react";
 
 class App extends React.Component{
+  state = {
+    name : 'Usha',
+    age : 25,
+    data : []
+  }
   render(){
-    let name = "Usha";
     return(
       <div>
         <center>
-          <h3>Welcome {name}</h3>
+          <h3>Welcome {this.state.name} and age = {this.state.age}</h3>
         </center>
       </div>
     )
