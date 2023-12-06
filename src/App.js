@@ -1,4 +1,5 @@
 import React from "react";
+import Test from "./Test";
 
 class App extends React.Component{
   state = {
@@ -10,7 +11,7 @@ class App extends React.Component{
     return(
       <div>
         <center>
-          <h3>Welcome {this.state.name} and age = {this.state.age}</h3>
+          <Test name = {this.state.name} age = {this.state.age}/>
         </center>
       </div>
     )
