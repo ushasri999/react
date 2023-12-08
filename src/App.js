@@ -1,22 +1,13 @@
-import React from "react";
-import Test from "./Test";
+import React from 'react'
 
-class App extends React.Component{
-  state = {
-    name : 'Usha',
-    age : 25,
-    data : []
-  }
-  render(){
-    return(
-      <div>
-        <center>
-          <Test name = {this.state.name} age = {this.state.age}/>
-        </center>
-      </div>
-    )
-      
-  }
+function App() {
+  return (
+    <div>
+      <center>
+        <button onClick={() => alert('Hello')}>Click me</button>
+      </center>
+    </div>
+  )
 }
 
-export default App;
+export default App
