@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function App() {
+  const [name, setName] = useState('');
   return (
     <div>
       <center>
-        <button onClick={() => alert('Hello')}>Click me</button>
+        Name : {name} <br></br>
+        <input type='text' name='name'onChange={(e) => setName(e.target.value)}/>
       </center>
     </div>
   )
