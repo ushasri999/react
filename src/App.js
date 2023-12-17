@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './App.css'
 
 function App() {
   const [data, setData] = useState({
@@ -21,7 +22,7 @@ function App() {
   }
   
   return (
-      <div>
+      <div className='App'>
           <form onSubmit={submitHandler}>
             <label>E-Mail</label><br/>
             <input type = 'text' name = 'email' onChange={changeHandler}/><br/>
