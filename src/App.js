@@ -21,7 +21,6 @@ function App() {
   }
   
   return (
-    <center>
       <div>
           <form onSubmit={submitHandler}>
             <label>E-Mail</label><br/>
@@ -32,7 +31,6 @@ function App() {
             <input type='submit' value='Login' className='btn btn-primary'/>
           </form>
       </div> 
-    </center>
   )
 }
 
