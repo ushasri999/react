@@ -1,38 +1,21 @@
-import React, { useState } from 'react'
-import './App.css'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from './Home'
+import Dashboard from './Dashboard'
+import About from './About'
 
-function App() {
-  const [data, setData] = useState({
-    email:'',
-    password:''
-  })
-
-  const changeHandler = e => {
-    setData({...data, [e.target.name] : e.target.value})
-  }
-  const submitHandler = e => {
-    e.preventDefault();
-    
-    if(data.password.length() < 5){
-      alert('provide password of length > 5')
-    }
-    else{
-      console.log(data);
-    }
-  }
-  
+const App = () => {
   return (
-      <div className='App'>
-          <form onSubmit={submitHandler}>
-            <label>E-Mail</label><br/>
-            <input type = 'text' name = 'email' onChange={changeHandler}/><br/>
-            
-            <label>Password</label><br/>
-            <input type = 'password' name = 'password' onChange={changeHandler}/><br/>
-            <input type='submit' value='Login' className='btn btn-primary'/>
-          </form>
-      </div> 
+    <div>
+      <BrowserRouter>
+        <Routes>
+            <Route path = '/' element = {<Home />}/>
+            <Route path = '/dashboard' element = {<Dashboard />}/>
+            <Route path = '/about' element = {<About />}/>
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
-export default App;
+export default App
