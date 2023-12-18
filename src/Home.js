@@ -8,7 +8,7 @@ const Home = () => {
     <center>
         <div>
         <h3>Welcome to home page</h3>
-        <Link to = {`/dashboard/${user}`} className = 'Link'>Dashboard</Link> {" "}
+        <Link to = {`/dashboard?name=${user}&age=${20}`} className = 'Link'>Dashboard</Link> {" "}
         <Link to = '/about' className = 'Link'>About</Link>
         </div>
     </center>
