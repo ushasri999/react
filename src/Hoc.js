@@ -4,12 +4,12 @@ const Hoc = (Component) => {
   return (
     class extends React.Component{
         state = {
-            auth : false
+            auth : true
         }
         render(){
             return(
                 <div>
-                    {this.state.auth ? <Component /> : <h1>Please Login</h1>}
+                    {this.state.auth ? <Component name = "usha"/> : <h1>Please Login</h1>}
                 </div>
             )
         }
